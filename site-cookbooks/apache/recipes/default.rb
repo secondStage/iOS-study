@@ -10,7 +10,7 @@ package "httpd" do
   action :install
 end
 
-service #httpd" do
+service "httpd" do
   action [ :enable, :start ]
 end
 

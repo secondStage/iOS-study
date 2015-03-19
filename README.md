@@ -26,6 +26,6 @@ Get Started
 -----------
 ```
 $ vagrant up
-$ knife solo bootstrap vagrant@192.168.33.10
+$ knife solo cook vagrant@192.168.33.10
 pass: vagrant
 ```
