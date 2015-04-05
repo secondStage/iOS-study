@@ -14,3 +14,10 @@ service "mysqld" do
   action [ :enable, :start ]
 end
 
+template "my.cnf" do
+  path "/etc/my.cnf"
+  source "my.cnf.erb"
+  owner "root"
+  group "root"
+  mode 0644
+end
