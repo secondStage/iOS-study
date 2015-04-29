@@ -20,14 +20,11 @@ Vagrant.configure(2) do |config|
   # Chef
   config.vm.provision "chef_solo" do |chef|
     chef.custom_config_path = "Vagrantfile.chef"
-  #  chef.cookbooks_path = ["site-cookbooks", "cookbooks"]
-  #  chef.add_recipe "apache"
-  #  chef.add_recipe "mysql"
-  #  #chef.add_recipe "mysql::database"
-  #  chef.add_recipe "database"
-  #  chef.add_recipe "php"
-
-  #  chef.json = {}
+    chef.cookbooks_path = ["site-cookbooks", "cookbooks"]
+    #chef.add_recipe "apache"
+    chef.add_recipe "mysql"
+    #chef.add_recipe "mysql::database"
+    #chef.add_recipe "php"
   end
 
   # Disable automatic box update checking. If you disable this, then
