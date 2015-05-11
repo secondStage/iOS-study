@@ -6,4 +6,6 @@ cookbook 'mysql', path: './site-cookbooks/mysql'
 
 #cookbook "mysql2_chef_gem"
 #cookbook 'database', '~> 4.0.3'
-#cookbook "yum"
+cookbook "yum"
+cookbook "yum-epel"
+cookbook "yum-mysql-community"
