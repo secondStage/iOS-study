@@ -1,0 +1,20 @@
+DEPENDENCIES
+  apache
+    path: site-cookbooks/apache
+  mysql
+    path: site-cookbooks/mysql
+  php
+    path: site-cookbooks/php
+  yum
+  yum-epel
+  yum-mysql-community
+
+GRAPH
+  apache (0.1.0)
+  mysql (0.1.0)
+  php (0.1.0)
+  yum (3.6.0)
+  yum-epel (0.6.0)
+    yum (~> 3.0)
+  yum-mysql-community (0.1.17)
+    yum (>= 3.0)

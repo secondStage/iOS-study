@@ -51,21 +51,3 @@ script "Secure_Install" do
     mysql -u root -p#{node['mysql']['password']} -e "FLUSH PRIVILEGES;"
   EOL
 end
-
-template "total.sql" do
-  path "/tmp/total.sql"
-  source "total.sql.erb"
-  owner "root"
-  group "root"
-  notifies :restart, "service[mysql]", :delayed
-  mode 0644
-end
-
-script "Query_Install" do
-  interpreter 'bash'
-  user "root"
-  code <<-EOL
-    mysql -u root -p#{node['mysql']['password']} -e "CREATE DATABASE ranking;"
-    mysql -u root -p#{node['mysql']['password']}  ranking < /tmp/total.sql
-  EOL
-end
