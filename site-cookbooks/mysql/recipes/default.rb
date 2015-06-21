@@ -66,6 +66,6 @@ script "Query_Install" do
   user "root"
   code <<-EOL
     mysql -u root -p#{node['mysql']['password']} -e "CREATE DATABASE ranking;"
-    mysql -u root -p#{node['mysql']['password']}  ranking < /tmp/total.sql
+    mysql -u root -p#{node['mysql']['password']} ranking < /tmp/total.sql
   EOL
 end

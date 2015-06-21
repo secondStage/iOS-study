@@ -7,24 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-script "epel_Install" do
-  interpreter 'bash'
-  user "root"
-  code <<-EOL
-    wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-    rpm -Uvh epel-release-6-8.noarch.rpm
-  EOL
-end
-
-script "remi_Install" do
-  interpreter 'bash'
-  user "root"
-  code <<-EOL
-  wget ​http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
-  rpm -Uvh remi-release-6.rpm
-  EOL
-end
-
 script "Composer_Install" do
   interpreter 'bash'
   user "root"
@@ -35,12 +17,12 @@ script "Composer_Install" do
   EOL
 end
 
-script "Larabel_Install" do
+script "Laravel_Install" do
   interpreter 'bash'
   user "root"
   code <<-EOL
     composer global require "laravel/installer=~1.1"
     export PATH=$PATH:~/.composer/vendor/bin
-    service httpd restart
+    sudo service httpd restart
   EOL
 end
