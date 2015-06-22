@@ -17,14 +17,13 @@ Requirements
 
 - ChefDK:　https://downloads.chef.io/chef-dk/
 
-- knifesolo:
+- knifeszero:
 ```
-$ gem i knife-solo --no-ri --no-rdoc
+$ chef gem install knife-zero
 ```
 
 Get Started
 -----------
 ```
 $ vagrant up
-$ vagrant reload --provision
 ```
