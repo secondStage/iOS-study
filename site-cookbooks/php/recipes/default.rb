@@ -40,7 +40,7 @@ package "php" do
   #options "--enablerepo=remi"
 end
 
-=begin
+
 # 関連パッケージのインストール
 
 #php-Monolog
@@ -90,4 +90,4 @@ package "php-mcrypt" do
   action :install
   #options "--enablerepo=epel,remi,rpmforge"
 end
-=end
+
