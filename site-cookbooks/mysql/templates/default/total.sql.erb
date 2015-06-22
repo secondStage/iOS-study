@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `total` (
+  `id` MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `total` SMALLINT UNSIGNED NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `idx_id` (`id`),
+  KEY `idx_created_at` (`created_at`),
+  KEY `idx_updated_at` (`updated_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
